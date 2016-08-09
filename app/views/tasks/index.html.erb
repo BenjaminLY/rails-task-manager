@@ -1,0 +1,6 @@
+<h1>List of Tasks</h1>
+<p><%= link_to 'New Task', new_task_path %></p>
+<% @tasks.each do |task| %>
+  <h2><%= link_to task.content, task_path(task) %> <%= task.done ? '[X]' : '[ ]' %></h2>
+  <p>priority: <%= task.priority %></p>
+<% end %>
